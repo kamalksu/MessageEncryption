@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Server {% endblock %}</h1>
+
+
+    <table class="table table-hover">
+
+        <tbody>
+          <tr>
+            <th scope="row">Encrypted Text:</th>
+            <td>{{ciphertext}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Plain Text:</th>
+            <td>{{plainText}}</td>
+          </tr>
+          <tr>
+            <th scope="row">HMAC authentic message:</th>
+            <td >{{hmac_auth}}</td>
+          </tr>
+        </tbody>
+      </table>    
+{% endblock %}

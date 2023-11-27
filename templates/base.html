@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - Message Encryption application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .message {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3
+        }
+        nav a {
+            color: #d64161;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <a href="{{ url_for('index') }}">Secure Web Communication Simulation</a>
+    </nav>
+ 
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+
+    <div class="alert alert-success" role="alert">
+        Summary: In this secure web communication simulation application, AES algorithm is uesed to encrypt data. Diffie-Hellman key exchange protocol to exchange cryptographic key. HMAC authentication method to check of integrity and authenticity of the received message.
+      </div>
+    
+</div>
+</body>
+</html>

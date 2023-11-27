@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Client {% endblock %}</h1>
+
+    <form method="post">
+        <div class="mb-3">
+            <label for="container" class="form-label">Send your message</label>
+          <textarea name="textToEncrypt" placeholder="Write your message here" class="form-control" rows="15" ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+     <br> 
+{% endblock %}
