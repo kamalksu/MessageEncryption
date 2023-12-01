@@ -5,12 +5,13 @@ import hmac
 class Server(object):
     def myPublicKeyForDH(self):
           return 3
-    
-    def decrypt(self, ciphertext, nonce, key):   
-          cipher = AES.new(key, AES.MODE_EAX, nonce=nonce)
-          plaintext = cipher.decrypt(ciphertext)
-          return plaintext
-       
+    def decrypt(ciphertext, nonce, key):
+          #.textToEncryptByte = bytes(textToEncrypt, 'utf-8')
+          cipher = AES.new(key, AES.MODE_EAX, nonce)
+          
+          plainText = cipher.decrypt(ciphertext, key)    
+          return plainText 
+             
     def hmac_compare_digest(textToEncrypt, key, hmac_digester_old):
           textToEncryptByte = bytes(textToEncrypt, 'utf-8')
           hash = hashlib.sha256
